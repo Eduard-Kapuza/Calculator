@@ -1,7 +1,6 @@
 package calculator;
 
 import calculator.myExceptions.*;
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,10 +13,10 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("""
-                Êàëüêóëÿòîð óìååò âûïîëíÿòü îïåðàöèè:
-                        ñëîæåíèÿ, âû÷èòàíèÿ, óìíîæåíèÿ è äåëåíèÿ
-                        ñ äâóìÿ öåëûìè ÷èñëàìè: a + b, a - b, a * b, a / b.
-                Ââåäèòå âûðàæåíèå
+                ÐšÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€ ÑƒÐ¼ÐµÐµÑ‚ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÑÑ‚ÑŒ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸:
+                        ÑÐ»Ð¾Ð¶ÐµÐ½Ð¸Ñ, Ð²Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ñ, ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð¸ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ
+                        Ñ Ð´Ð²ÑƒÐ¼Ñ Ñ†ÐµÐ»Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸: a + b, a - b, a * b, a / b.
+                Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ
                 """);
         String inputData = scanner.nextLine();
         String result = calc(inputData);
@@ -32,7 +31,7 @@ public class Calculator {
 
         validateInputData(inputData);
 
-        String result = "ïóñòàÿ ñòðîêà :)";
+        String result = "Ð¿ÑƒÑÑ‚Ð°Ñ ÑÑ‚Ñ€Ð¾ÐºÐ° :)";
         switch (signOperation) {
             case "+" -> {
                 return String.valueOf(massInt[0] + massInt[1]);
