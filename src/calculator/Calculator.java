@@ -67,7 +67,6 @@ public class Calculator {
         } else {
             throw new FormatMathOperationException();
         }
-
     }
 
     private static void findSignOperation(String inputData) {
