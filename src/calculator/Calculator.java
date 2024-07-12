@@ -27,12 +27,8 @@ public class Calculator {
     }
 
     public static String calc(String input) {
-        return run(input);
-    }
 
-    private static String run(String inputData) {
-
-        validateInputData(inputData);
+        validateInputData(input);
 
         String result = "пустая строка :)";
         switch (signOperation) {
