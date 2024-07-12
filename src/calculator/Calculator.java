@@ -51,36 +51,26 @@ public class Calculator {
 
     private static void validateInputData(String inputData) {
 
-        if (inputData.length() < 3 || Pattern.compile("^\\d{1,2} ?[+-/*]").matcher(inputData).find()) {
-            throw new NotMathOperationException();
+        if (inputData.contains(".") || inputData.contains(",")) {
+            throw new FractionalNumberException();
         }
 
         String regex = "^\\d{1,2} ?[+-/*] ?\\d{1,2}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(inputData);
 
-        Matcher matcher1 = Pattern.compile("[+-/*]").matcher(inputData);
-        int countOperator = 0;
-        while (matcher1.find()) {
-            countOperator++;
-        }
-
         if (matcher.matches()) {
             findSignOperation(inputData);
-        } else if (countOperator > 1) {
-            throw new FormatMathOperationException();
-        } else if (Pattern.compile("[.,]").matcher(inputData).find()) {
-            throw new FractionalNumberException();
         } else {
-            throw new InvalidInputDataException();
+            throw new FormatMathOperationException();
         }
+
     }
 
     private static void findSignOperation(String inputData) {
 
         String regex = "[+-/*]";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(inputData);
+        Matcher matcher = Pattern.compile(regex).matcher(inputData);
 
         if (matcher.find()) {
             signOperation = matcher.group();
