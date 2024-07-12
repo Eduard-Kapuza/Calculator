@@ -51,7 +51,7 @@ public class Calculator {
 
     private static void validateInputData(String inputData) {
 
-        if (inputData.contains(".") || inputData.contains(",")) {
+        if (Pattern.compile("\\d ?[,.] ?\\d").matcher(inputData).find()) {
             throw new FractionalNumberException();
         }
 
