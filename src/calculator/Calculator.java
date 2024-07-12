@@ -1,6 +1,7 @@
 package calculator;
 
 import calculator.myExceptions.*;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -68,7 +69,7 @@ public class Calculator {
     private static void findSignOperation(String inputData) {
 
         regex = "[+-/*]";
-        pattern=Pattern.compile(regex);
+        pattern = Pattern.compile(regex);
         matcher = pattern.matcher(inputData);
 
         if (matcher.find()) {
