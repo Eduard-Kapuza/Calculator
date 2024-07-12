@@ -31,7 +31,7 @@ public class Calculator {
 
         validateInputData(input);
 
-        String result = "пустая строка :)";
+        String result = "пустая строка  :)";
         switch (signOperation) {
             case "+" -> {
                 return String.valueOf(massInt[0] + massInt[1]);
