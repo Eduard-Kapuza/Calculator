@@ -6,9 +6,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Calculator {
+    static String regex;
     static String signOperation;
     static String[] massString;
     static int[] massInt;
+    static Matcher matcher;
+    static Pattern pattern;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -55,9 +58,9 @@ public class Calculator {
             throw new FractionalNumberException();
         }
 
-        String regex = "^\\d{1,2} ?[+-/*] ?\\d{1,2}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(inputData);
+        regex = "^\\d{1,2} ?[+-/*] ?\\d{1,2}$";
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(inputData);
 
         if (matcher.matches()) {
             findSignOperation(inputData);
@@ -69,8 +72,9 @@ public class Calculator {
 
     private static void findSignOperation(String inputData) {
 
-        String regex = "[+-/*]";
-        Matcher matcher = Pattern.compile(regex).matcher(inputData);
+        regex = "[+-/*]";
+        pattern=Pattern.compile(regex);
+        matcher = pattern.matcher(inputData);
 
         if (matcher.find()) {
             signOperation = matcher.group();
