@@ -2,6 +2,6 @@ package calculator.myExceptions;
 
 public class ConstraintNumberException extends RuntimeException{
     public ConstraintNumberException() {
-        super("В введённом выражение присутствует число(а) меньше 1 или больше 10");
+        super("Р’ РІРІРµРґС‘РЅРЅРѕРј РІС‹СЂР°Р¶РµРЅРёРµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ С‡РёСЃР»Рѕ(Р°) РјРµРЅСЊС€Рµ 1 РёР»Рё Р±РѕР»СЊС€Рµ 10");
     }
 }

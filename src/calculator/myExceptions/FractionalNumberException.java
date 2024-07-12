@@ -2,6 +2,6 @@ package calculator.myExceptions;
 
 public class FractionalNumberException extends RuntimeException{
     public FractionalNumberException() {
-        super("В введённом выражение присутствует дробное число");
+        super("Р’ РІРІРµРґС‘РЅРЅРѕРј РІС‹СЂР°Р¶РµРЅРёРµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РґСЂРѕР±РЅРѕРµ С‡РёСЃР»Рѕ");
     }
 }

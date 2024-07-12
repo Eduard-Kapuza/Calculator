@@ -2,6 +2,6 @@ package calculator.myExceptions;
 
 public class NotMathOperationException extends RuntimeException {
     public NotMathOperationException() {
-        super("Введённая строка не является математической операцией");
+        super("Р’РІРµРґС‘РЅРЅР°СЏ СЃС‚СЂРѕРєР° РЅРµ СЏРІР»СЏРµС‚СЃСЏ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРµР№");
     }
 }

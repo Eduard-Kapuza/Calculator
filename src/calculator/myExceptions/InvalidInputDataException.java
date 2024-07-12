@@ -2,6 +2,6 @@ package calculator.myExceptions;
 
 public class InvalidInputDataException extends RuntimeException{
     public InvalidInputDataException() {
-        super("Введённое выражение НЕ соответствуют требованиям или некорректно");
+        super("Р’РІРµРґС‘РЅРЅРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ РќР• СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‚ С‚СЂРµР±РѕРІР°РЅРёСЏРј РёР»Рё РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ");
     }
 }

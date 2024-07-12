@@ -51,7 +51,7 @@ public class Calculator {
 
     private static void validateInputData(String inputData) {
 
-        if (inputData.length() < 3) {
+        if (inputData.length() < 3 || Pattern.compile("^\\d{1,2} ?[+-/*]").matcher(inputData).find()) {
             throw new NotMathOperationException();
         }
 
