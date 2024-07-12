@@ -52,17 +52,17 @@ public class Calculator {
     private static void validateInputData(String inputData) {
 
         if (Pattern.compile("\\d ?[,.] ?\\d").matcher(inputData).find()) {
-            throw new FractionalNumberException();
+            throw new FractionNumberRuntimeException();
         }
 
         regex = "^\\d{1,2} ?[+-/*] ?\\d{1,2}$";
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(inputData);
 
-        if (matcher.matches()) {
+        if (matcher.find()) {
             findSignOperation(inputData);
         } else {
-            throw new FormatMathOperationException();
+            throw new FormatMathOperationRuntimeException();
         }
     }
 
@@ -88,7 +88,7 @@ public class Calculator {
         for (int i = 0; i < massString.length; i++) {
             massInt[i] = Integer.parseInt(massString[i].trim());
             if (massInt[i] < 1 || massInt[i] > 10) {
-                throw new ConstraintNumberException();
+                throw new ConstraintNumberRuntimeException();
             }
         }
     }
